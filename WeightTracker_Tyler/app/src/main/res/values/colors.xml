@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Catppuccin Mocha -->
+    <color name="ctp_crust">#11111B</color>
+    <color name="ctp_mantle">#181825</color>
+    <color name="ctp_base">#1E1E2E</color>
+    <color name="ctp_surface0">#313244</color>
+    <color name="ctp_surface1">#45475A</color>
+    <color name="ctp_surface2">#585B70</color>
+    <color name="ctp_overlay0">#6C7086</color>
+    <color name="ctp_overlay1">#7F849C</color>
+    <color name="ctp_overlay2">#9399B2</color>
+    <color name="ctp_subtext0">#A6ADC8</color>
+    <color name="ctp_subtext1">#BAC2DE</color>
+    <color name="ctp_text">#CDD6F4</color>
+    <color name="ctp_lavender">#B4BEFE</color>
+    <color name="ctp_blue">#89B4FA</color>
+    <color name="ctp_sapphire">#74C7EC</color>
+    <color name="ctp_teal">#94E2D5</color>
+    <color name="ctp_green">#A6E3A1</color>
+    <color name="ctp_yellow">#F9E2AF</color>
+    <color name="ctp_peach">#FAB387</color>
+    <color name="ctp_maroon">#EBA0AC</color>
+    <color name="ctp_red">#F38BA8</color>
+    <color name="ctp_mauve">#CBA6F7</color>
+    <color name="ctp_pink">#F5C2E7</color>
+
+    <color name="gradStart">@color/ctp_crust</color>
+    <color name="gradCenter">@color/ctp_surface0</color>
+    <color name="gradEnd">@color/ctp_mantle</color>
+</resources>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">WeightTracker</string>
+    <string name="weight_logs_title">Weight Logs</string>
+    <string name="tracked_history_text">Tracked history &amp; data entries</string>
+    <string name="target_goal_default">Target Goal: Not Set</string>
+    <string name="logout_btn_text">Logout</string>
+    <string name="edit_goal_btn_text">Edit Goal</string>
+    <string name="enter_weight_hint">Enter weight (lbs)</string>
+    <string name="add_btn_text">Add</string>
+
+    <string name="current_weight_label">CURRENT</string>
+    <string name="unit_lbs">lbs</string>
+    <string name="no_entries_yet">No entries yet</string>
+    <string name="no_entries_hint">Log your first weight above to start tracking.</string>
+    <string name="history_label">HISTORY</string>
+    <string name="no_goal_prompt">Tap the target icon to set a goal</string>
+    <string name="dash_placeholder">--</string>
+</resources>

@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- App is Catppuccin Mocha only, so the base theme is pinned dark. -->
+    <style name="Base.Theme.WeightTracker" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/ctp_mauve</item>
+        <item name="colorOnPrimary">@color/ctp_crust</item>
+        <item name="colorSecondary">@color/ctp_blue</item>
+        <item name="colorOnSecondary">@color/ctp_crust</item>
+        <item name="colorError">@color/ctp_red</item>
+        <item name="colorOnError">@color/ctp_crust</item>
+
+        <item name="android:colorBackground">@color/ctp_crust</item>
+        <item name="colorSurface">@color/ctp_base</item>
+        <item name="colorOnSurface">@color/ctp_text</item>
+        <item name="colorOnSurfaceVariant">@color/ctp_subtext0</item>
+        <item name="colorOutline">@color/ctp_surface1</item>
+
+        <item name="android:statusBarColor">@color/ctp_crust</item>
+        <item name="android:navigationBarColor">@color/ctp_crust</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <item name="materialAlertDialogTheme">@style/Theme.WeightTracker.Dialog</item>
+        <item name="android:alertDialogTheme">@style/Theme.WeightTracker.Dialog</item>
+        <item name="alertDialogTheme">@style/Theme.WeightTracker.Dialog</item>
+    </style>
+
+    <style name="Theme.WeightTracker" parent="Base.Theme.WeightTracker" />
+
+    <style name="Theme.WeightTracker.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">@color/ctp_mauve</item>
+        <item name="colorSurface">@color/ctp_base</item>
+        <item name="colorOnSurface">@color/ctp_text</item>
+        <item name="colorOnSurfaceVariant">@color/ctp_subtext0</item>
+        <item name="android:textColorPrimary">@color/ctp_text</item>
+        <item name="android:textColorSecondary">@color/ctp_subtext0</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.WeightTracker.Dialog</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/TextAppearance.WeightTracker.DialogTitle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.WeightTracker.DialogButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.WeightTracker.DialogButton.Danger</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.WeightTracker.DialogButton.Muted</item>
+    </style>
+
+    <style name="ShapeAppearance.WeightTracker.Dialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <style name="TextAppearance.WeightTracker.DialogTitle" parent="MaterialAlertDialog.Material3.Title.Text">
+        <item name="android:textColor">@color/ctp_mauve</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.WeightTracker.DialogButton" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/ctp_mauve</item>
+    </style>
+
+    <style name="Widget.WeightTracker.DialogButton.Danger">
+        <item name="android:textColor">@color/ctp_red</item>
+    </style>
+
+    <style name="Widget.WeightTracker.DialogButton.Muted">
+        <item name="android:textColor">@color/ctp_overlay2</item>
+    </style>
+</resources>

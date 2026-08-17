@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="32dp"
+    android:background="#11111B">
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goals &amp; Permissions"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#CBA6F7"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Configure SMS alerts and data goals"
+        android:textSize="13sp"
+        android:textColor="#A6E3A1"
+        android:layout_marginBottom="40dp" />
+
+    <!-- SMS Notification Toggle -->
+    <Switch
+        android:id="@+id/smsPermissionSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Enable SMS Weight Alerts"
+        android:textColor="#CDD6F4"
+        android:textSize="16sp"
+        android:background="#181825"
+        android:paddingHorizontal="16dp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Target Goal Input -->
+    <EditText
+        android:id="@+id/goalWeightEditText"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="Target Weight Goal (lbs)"
+        android:textColor="#CDD6F4"
+        android:textColorHint="#585B70"
+        android:background="#181825"
+        android:paddingHorizontal="18dp"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Save & Continue Button -->
+    <Button
+        android:id="@+id/savePermissionsButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Save &amp; Open Dashboard"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#11111B"
+        android:backgroundTint="#CBA6F7"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Test Notification Trigger Button -->
+<!--    <Button-->
+<!--        android:id="@+id/testNotificationButton"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="56dp"-->
+<!--        android:text="Test Notification Now"-->
+<!--        android:textSize="15sp"-->
+<!--        android:textColor="#CBA6F7"-->
+<!--        android:backgroundTint="#181825" />-->
+
+</LinearLayout>

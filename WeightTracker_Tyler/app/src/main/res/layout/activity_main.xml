@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- fitsSystemWindows lives on the outer frame: it overwrites padding with the
+     window insets, so content padding has to sit on a child. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ctp_crust"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="12dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight_logs_title"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.01"
+                    android:textColor="@color/ctp_mauve" />
+
+                <TextView
+                    android:id="@+id/entryCountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tracked_history_text"
+                    android:textSize="12sp"
+                    android:letterSpacing="0.02"
+                    android:textColor="@color/ctp_overlay2"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/editGoalButton"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_circle_button"
+                android:src="@drawable/ic_target"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:contentDescription="@string/edit_goal_btn_text"
+                android:tooltipText="@string/edit_goal_btn_text"
+                android:layout_marginEnd="10dp" />
+
+            <ImageButton
+                android:id="@+id/logoutButton"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_circle_button"
+                android:src="@drawable/ic_logout"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:contentDescription="@string/logout_btn_text"
+                android:tooltipText="@string/logout_btn_text" />
+        </LinearLayout>
+
+        <!-- Hero: current weight, trend, goal progress -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_hero_card"
+            android:padding="20dp"
+            android:layout_marginTop="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/current_weight_label"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.16"
+                        android:textColor="@color/ctp_overlay1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:baselineAligned="true"
+                        android:layout_marginTop="2dp">
+
+                        <TextView
+                            android:id="@+id/currentWeightTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dash_placeholder"
+                            android:textSize="42sp"
+                            android:textStyle="bold"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/ctp_text" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/unit_lbs"
+                            android:textSize="14sp"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/ctp_overlay2"
+                            android:layout_marginStart="6dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/trendPill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_pill"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:drawablePadding="3dp"
+                    android:visibility="gone"
+                    tools:text="2.4 lbs"
+                    tools:visibility="visible" />
+            </LinearLayout>
+
+            <!-- Goal progress -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/goalWeightTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/target_goal_default"
+                        android:textSize="12sp"
+                        android:textColor="@color/ctp_green" />
+
+                    <TextView
+                        android:id="@+id/goalProgressTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/ctp_lavender"
+                        android:visibility="gone"
+                        tools:text="64%"
+                        tools:visibility="visible" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/goalProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="7dp"
+                    android:progressDrawable="@drawable/bg_progress_track"
+                    android:max="100"
+                    android:progress="0" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Quick entry -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="18dp">
+
+            <EditText
+                android:id="@+id/weightInputEditText"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:hint="@string/enter_weight_hint"
+                android:textSize="15sp"
+                android:textColor="@color/ctp_text"
+                android:textColorHint="@color/ctp_overlay0"
+                android:background="@drawable/bg_input_field"
+                android:paddingHorizontal="18dp"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone"
+                android:autofillHints="none"
+                android:maxLines="1"
+                tools:ignore="VisualLintTextFieldSize" />
+
+            <ImageButton
+                android:id="@+id/addWeightButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_add_button"
+                android:src="@drawable/ic_plus"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/add_btn_text"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history_label"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.16"
+            android:textColor="@color/ctp_overlay1"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="10dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/weightListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:scrollbars="none"
+                android:clipToPadding="false"
+                android:paddingBottom="20dp"
+                tools:listitem="@layout/item_weight_log" />
+
+            <LinearLayout
+                android:id="@+id/emptyStateView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingBottom="48dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_scale"
+                    android:contentDescription="@null"
+                    android:alpha="0.85" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_entries_yet"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/ctp_subtext0"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_entries_hint"
+                    android:textSize="12sp"
+                    android:textColor="@color/ctp_overlay0"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
